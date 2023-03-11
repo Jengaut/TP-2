@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Dog card</title>
+</head>
+
+<body>
+  <div class="card">
+    <div id="dogsAPI">
+      <p>Placeholder Image</p>
+    </div>
+    <div class="card-content">
+      <div class="dog-info">
+        <div class="id">
+          <span>ID</span>
+          <p id="dogId"></p>
+        </div>
+        <div class="age">
+          <span>Age</span>
+          <p id="dogAge"></p>
+        </div>
+        <div class="registry">
+          <span>Registry</span>
+          <p id="dogRegistry"></p>
+        </div>
+      </div>
+      <button onclick="topFunction()" id="btn-primary">View More</button>
+      <script>
+        function getRndInteger(min, max) {
+          return Math.floor(Math.random() * (max - min)) + min;
+        }
+
+        function topFunction() {
+          document.getElementById('dogId').innerHTML = getRndInteger(1, 10);
+          document.getElementById('dogAge').innerHTML = getRndInteger(0, 20) + " Years";
+          document.getElementById('dogRegistry').innerHTML = getRndInteger(1, 100);
+        }
+      </script>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+
+</html>
